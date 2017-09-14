@@ -1,0 +1,13 @@
+<script id='facebook-jssdk' src="http://connect.facebook.net/en_US/sdk.js"></script>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '1505630952782965',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+    };
+</script>
+<button onclick="FB.login(() => {},{scope:'publish_actions'})">Login with Facebook</button>
