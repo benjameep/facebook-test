@@ -9,5 +9,22 @@
         });
         FB.AppEvents.logPageView();
     };
+    function login(){
+        FB.login(doStuff,{
+            scope:'publish_actions',
+            return_scopes: true
+        })
+    }
+    function doStuff(res){
+        if(!res.authResponses){
+            console.log('Bye')
+            return
+        }
+        console.log('Good to see you, '+res.name+'.')
+        console.log(res)
+//        FB.api('me/friends','get',res => {
+//            
+//        })
+    }
 </script>
-<button onclick="FB.login(() => {},{scope:'publish_actions'})">Login with Facebook</button>
+<button onclick="login()">Login with Facebook</button>
