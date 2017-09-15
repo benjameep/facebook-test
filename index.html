@@ -10,7 +10,7 @@
         FB.AppEvents.logPageView();
     };
     function login(){
-        FB.login(doStuff)
+        FB.login(doStuff,{scope: 'user_posts'})
     }
     function doStuff(res){
         if(!res.authResponses){
@@ -22,3 +22,4 @@
     }
 </script>
 <button onclick="login()">Login with Facebook</button>
+EAABvfeiqP68BAOew9let6E3DZBDElhBnXZCPZB4sBAIMCY1reHlmLEivzslmZBAykrNW8NhxrwPz4ANGlzzlkGuAIGk6OO1Cadb3E5hcytDeoTllqoVvK36Mw2avyXkGqK6ZBZBe693USW3ppVrK4clqZCZCrD3OtEUuzPKWuhF3AnGGeZB7rgUjVbcYBhxU8LksKc0P0Pu11NgZDZD
